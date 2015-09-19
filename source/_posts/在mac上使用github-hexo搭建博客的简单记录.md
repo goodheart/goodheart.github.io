@@ -162,7 +162,6 @@ deploy:
         gitcafe: https://gitcafe.com/goodheart/goodheart.git,gitcafe-pages 
 ```
 如果出现ERROR Deployer not found: git,可以使用下面的命令解决,
-=======
 plugins:
 ```
 如果出现ERROR Deployer not found: git
