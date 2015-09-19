@@ -2,6 +2,10 @@ title: 在mac上使用github+hexo搭建博客的简单记录
 date: 2015-09-17 16:09:00
 tags:
 ---
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 6b3cb3bfb6d9cfafdb720949f927d884a2f2aef3
 
 ## hexo的安装
 安装nvm(Node Version Manager)
@@ -34,6 +38,10 @@ Now using node v0.10.40 (npm v1.4.28)
 ``` bash
 $ npm install -g hexo
 $ hexo --version
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 6b3cb3bfb6d9cfafdb720949f927d884a2f2aef3
 ### 安装nvm(Node Version Manager)
 ``` bash
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.26.1/install.sh | bash
@@ -64,6 +72,10 @@ Now using node v0.10.40 (npm v1.4.28)
 ``` bash
 blog@LECLOUD:~$ npm install -g hexo
 blog@LECLOUD:~$ hexo --version
+<<<<<<< HEAD
+=======
+>>>>>>> 6eff09422d44c83e6cf8fbc5371559ac226a773a
+>>>>>>> 6b3cb3bfb6d9cfafdb720949f927d884a2f2aef3
 hexo-cli: 0.1.8
 os: Linux 3.16.0-23-generic linux x64
 http_parser: 1.0
@@ -75,6 +87,10 @@ zlib: 1.2.8
 modules: 11
 openssl: 1.0.1p
 ```
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 6b3cb3bfb6d9cfafdb720949f927d884a2f2aef3
 
 ## hexo的使用
 创建一个文件夹并初始化blog
@@ -141,6 +157,10 @@ INFO  Hexo is running at http://0.0.0.0:4000/. Press Ctrl+C to stop.
 $ npm install hexo-server --save
 ```
 同时同步到github和gitcafe
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 6b3cb3bfb6d9cfafdb720949f927d884a2f2aef3
 下一步 创建一个文件夹并初始化blog
 ``` bash
 blog@LECLOUD:~$ mkdir ~/blog
@@ -155,34 +175,58 @@ _config.yml  package.json  scaffolds  source  themes
 blog@LECLOUD:~/blog$ 
 ```
 ### 同时同步到github和gitcafe
+<<<<<<< HEAD
+=======
+>>>>>>> 6eff09422d44c83e6cf8fbc5371559ac226a773a
+>>>>>>> 6b3cb3bfb6d9cfafdb720949f927d884a2f2aef3
 ``` bash
 deploy:
   type: git
   repo: 
         github: https://github.com/goodheart/goodheart.github.io.git,master
         gitcafe: https://gitcafe.com/goodheart/goodheart.git,gitcafe-pages 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 6b3cb3bfb6d9cfafdb720949f927d884a2f2aef3
 ```
 如果出现ERROR Deployer not found: git,可以使用下面的命令解决,
 =======
 plugins:
 ```
 如果出现ERROR Deployer not found: git
+<<<<<<< HEAD
+=======
+>>>>>>> 6eff09422d44c83e6cf8fbc5371559ac226a773a
+>>>>>>> 6b3cb3bfb6d9cfafdb720949f927d884a2f2aef3
 ``` bash
 $ npm install hexo-deployer-git --save
 https://hexo.io/docs/deployment.html
 ```
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 6b3cb3bfb6d9cfafdb720949f927d884a2f2aef3
 注意：关闭terminal之后再次使用hexo可能无法使用，处理方法如下
 ``` bash
 hexo: command not found
 $ nvm use 0.10
 Now using node v0.10.40 (npm v1.4.28)
 $ hexo --version
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 6b3cb3bfb6d9cfafdb720949f927d884a2f2aef3
 #### 注意：关闭terminal之后再次使用hexo可能无法使用，处理方法如下
 ``` bash
 hexo: command not found
 blog@LECLOUD:~/blog$ nvm use 0.10
 Now using node v0.10.40 (npm v1.4.28)
 blog@LECLOUD:~/blog$ hexo --version
+<<<<<<< HEAD
+=======
+>>>>>>> 6eff09422d44c83e6cf8fbc5371559ac226a773a
+>>>>>>> 6b3cb3bfb6d9cfafdb720949f927d884a2f2aef3
 hexo: 3.1.1
 os: Linux 3.16.0-23-generic linux x64
 http_parser: 1.0
@@ -193,6 +237,10 @@ uv: 0.10.36
 zlib: 1.2.8
 modules: 11
 openssl: 1.0.1p
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 6b3cb3bfb6d9cfafdb720949f927d884a2f2aef3
 ```
 ## hexo换主题
 进入blog/themes/文件夹
@@ -227,4 +275,13 @@ theme: next
 
 ## hexo 安装插件
  可以在hexo看到[插件列表](https://hexo.io/plugins/),希望了解某个插件的安装、使用等，点击该插件则会进入对应的github页面,详读对应的README即可，此处省略
+<<<<<<< HEAD
 ```
+=======
+
+
+=======
+blog@LECLOUD:~/blog$ 
+```
+>>>>>>> 6eff09422d44c83e6cf8fbc5371559ac226a773a
+>>>>>>> 6b3cb3bfb6d9cfafdb720949f927d884a2f2aef3
