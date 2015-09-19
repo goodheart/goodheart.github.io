@@ -235,13 +235,15 @@ theme: next
 2、创建git仓库
     $ git init
     Initialized empty Git repository in /home/blog/blog/.git/
-3、将_config.yml、source、themes添加到git中进行管理
-    $ git add _config.yml source/ themes/ 
-4、$ git remote add origin https://github.com/goodheart/goodheart.github.io.git
-5、创建并进入pagesSource分支
+3、$ git remote add origin https://github.com/goodheart/goodheart.github.io.git
+4、创建并进入pagesSource分支
     $ git checkout -b pagesSource
     Switched to a new branch 'pagesSource'
-6、提交
+5、将_config.yml、source、themes添加到git中进行管理
+    $ git add _config.yml source/ themes/ 
+6、本地提交
+	$ git commit -m 'first commit'
+7、提交到github
     git push -u origin pagesSource 
  ```
 ## 新的地点写博客步骤
@@ -265,3 +267,28 @@ theme: next
    remote: Total 127 (delta 0), reused 0 (delta 0), pack-reused 125
 7、后续的步骤正常执行，只是themes主题需要稍微注意下
  ```
+## 在之前写过文章的blog里面进行提交时步骤
+``` bash
+1查看当前分支名称并切换到pagsSource分支
+	majiandeMacBook-Pro:blog majian$ git branch
+	* pagesSource
+2、将_config.yml source/ themes/加入到git中，当然也可以使用git status -s查看状态，然后将状态改变的文件加入git，我这里是为了方便
+	$ git add _config.yml source/ themes/
+3、查看状态，确保无误
+	$ git status -s 
+	M  "source/_posts/\345\234\250mac\344\270\212\344\275\277\347\224\250github-hexo\346\220\255\345\273\272\345\215\232\345\256\242\347\232\204\347\256\200\345\215\225\350\256\260\345\275\225.md"
+4、本地提交
+	$ git commit -m 'update surce'
+	[pagesSource 8978c1d] update surce
+ 1 file changed, 40 insertions(+)
+5、提交到github	
+	majiandeMacBook-Pro:blog majian$ git push -u origin pagesSource
+	Counting objects: 5, done.
+	Delta compression using up to 4 threads.
+	Compressing objects: 100% (4/4), done.
+	Writing objects: 100% (5/5), 1.21 KiB | 0 bytes/s, done.
+	Total 5 (delta 2), reused 0 (delta 0)
+	To https://github.com/goodheart/goodheart.github.io.git
+   fc198a3..8978c1d  pagesSource -> pagesSource
+   Branch pagesSource set up to track remote branch pagesSource from origin.
+```
