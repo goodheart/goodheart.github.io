@@ -139,21 +139,20 @@ INFO  Hexo is running at http://0.0.0.0:4000/. Press Ctrl+C to stop.
 ``` bash
 $ npm install hexo-server --save
 ```
-同时同步到github和gitcafe
 下一步 创建一个文件夹并初始化blog
 ``` bash
-blog@LECLOUD:~$ mkdir ~/blog
-blog@LECLOUD:~$ ls -a
+$ mkdir ~/blog
+$ ls -a
 .  ..  .bash_logout  .bashrc  blog  .npm  .nvm  .profile
-blog@LECLOUD:~$ cd blog/
-blog@LECLOUD:~/blog$ hexo init
-INFO  Copying data to ~/blog
+$ cd blog/
+$ hexo init
+NFO  Copying data to ~/blog
 INFO  You are almost done! Don't forget to run 'npm install' before you start blogging with Hexo!
-blog@LECLOUD:~/blog$ ls
+$ ls
 _config.yml  package.json  scaffolds  source  themes
-blog@LECLOUD:~/blog$ 
 ```
-### 同时同步到github和gitcafe
+
+同时同步到github和gitcafe
 ``` bash
 deploy:
   type: git
@@ -225,10 +224,10 @@ theme: next
 ## hexo 安装插件
  可以在hexo看到[插件列表](https://hexo.io/plugins/),希望了解某个插件的安装、使用等，点击该插件则会进入对应的github页面,详读对应的README即可，此处省略
 
-# 实现多点同步的解决方案
+## 实现多点同步的解决方案
  我的思路是：将hexo的_config.yml、source文件夹、themes文件夹通过github进行备份即可，每次写文章之前进行pull，写完之后进行push
  具体步骤如下:
-## 在第一次写博客的电脑上
+- 在第一次写博客的电脑上
  ``` bash
 1、将上面的事做完：配置博客、写文章、部署文章
 2、创建git仓库
@@ -245,7 +244,7 @@ theme: next
 7、提交到github
     git push -u origin pagesSource 
  ```
-## 新的地点写博客步骤
+- 新的地点写博客步骤
  ``` bash
 1、创建blog文件夹,进入blog并执行hexo init初始化
 2、删除_config.yml source 以及themes
@@ -266,7 +265,7 @@ theme: next
    remote: Total 127 (delta 0), reused 0 (delta 0), pack-reused 125
 7、后续的步骤正常执行，只是themes主题需要稍微注意下
  ```
-## 在之前写过文章的blog里面进行提交时步骤
+- 在之前写过文章的blog里面进行提交时步骤
 ``` bash
 1查看当前分支名称并切换到pagsSource分支
 	majiandeMacBook-Pro:blog majian$ git branch
