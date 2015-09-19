@@ -225,3 +225,43 @@ theme: next
 
 ## hexo 安装插件
  可以在hexo看到[插件列表](https://hexo.io/plugins/),希望了解某个插件的安装、使用等，点击该插件则会进入对应的github页面,详读对应的README即可，此处省略
+
+# 实现多点同步的解决方案
+ 我的思路是：将hexo的_config.yml、source文件夹、themes文件夹通过github进行备份即可，每次写文章之前进行pull，写完之后进行push
+ 具体步骤如下:
+## 在第一次写博客的电脑上
+ ``` bash
+1、将上面的事做完：配置博客、写文章、部署文章
+2、创建git仓库
+    $ git init
+    Initialized empty Git repository in /home/blog/blog/.git/
+3、将_config.yml、source、themes添加到git中进行管理
+    $ git add _config.yml source/ themes/ 
+4、$ git remote add origin https://github.com/goodheart/goodheart.github.io.git
+5、创建并进入pagesSource分支
+    $ git checkout -b pagesSource
+    Switched to a new branch 'pagesSource'
+6、提交
+    git push -u origin pagesSource 
+ ```
+## 新的地点写博客步骤
+ ``` bash
+1、创建blog文件夹,进入blog并执行hexo init初始化
+2、删除_config.yml source 以及themes
+   $ rm _config.yml 
+   $ rm -rf source/
+   $ rm -rf themes/
+3、初始化git仓库
+   $ git init
+   Initialized empty Git repository in /home/blog/blog/.git/
+4、$ git remote add origin https://github.com/goodheart/goodheart.github.io.git
+5、创建并进入分支
+   $ git checkout -b pagesSource
+   Switched to a new branch 'pagesSource'
+6、将goodheart.github.io的pagesSource分支的代码pull到本地
+   git pull -u origin pagesSource
+   remote: Counting objects: 127, done.
+   remote: Compressing objects: 100% (2/2), done.
+   remote: Total 127 (delta 0), reused 0 (delta 0), pack-reused 125
+7、后续的步骤正常执行，只是themes主题需要稍微注意下
+ ```
