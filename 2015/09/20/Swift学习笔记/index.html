@@ -41,16 +41,23 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="实例方法123456789101112131415161718192021222324252627282930- (NSString *)string;- (NSUInteger)scanLocation;- (void)setScanLocation:(NSUInteger)pos;//&amp;lt;span style=&quot;font-family: Arial, Helvetica, sans-ser">
+<meta name="description" content="构造器调用链的规则1234567Swift对构造器之间的调用链制定了如下3条规则：    子类构造器必须调用直接父类的指定构造器(如果有父类)    便利构造器必须调用同一个类中得其他构造器    便利构造器调用的构造器链的最终节点必须是制定构造器简化记忆为：    指定构造器总是向上代理（调用父类构造器）    便利构造器总是必须横向代理（调用当前类的其他构造器）
+
+两段式构造12345671、">
 <meta property="og:type" content="article">
-<meta property="og:title" content="NSScanner使用方法">
-<meta property="og:url" content="http://blog.goodheart-ios.com.cn/2015/09/20/NSScanner使用方法/index.html">
+<meta property="og:title" content="Swift学习笔记">
+<meta property="og:url" content="http://blog.goodheart-ios.com.cn/2015/09/20/Swift学习笔记/index.html">
 <meta property="og:site_name" content="雨中漫步">
-<meta property="og:description" content="实例方法123456789101112131415161718192021222324252627282930- (NSString *)string;- (NSUInteger)scanLocation;- (void)setScanLocation:(NSUInteger)pos;//&amp;lt;span style=&quot;font-family: Arial, Helvetica, sans-ser">
-<meta property="og:updated_time" content="2015-09-20T14:06:45.000Z">
+<meta property="og:description" content="构造器调用链的规则1234567Swift对构造器之间的调用链制定了如下3条规则：    子类构造器必须调用直接父类的指定构造器(如果有父类)    便利构造器必须调用同一个类中得其他构造器    便利构造器调用的构造器链的最终节点必须是制定构造器简化记忆为：    指定构造器总是向上代理（调用父类构造器）    便利构造器总是必须横向代理（调用当前类的其他构造器）
+
+两段式构造12345671、">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/545868-a5f483a4478e3c09.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2015-09-20T14:22:29.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="NSScanner使用方法">
-<meta name="twitter:description" content="实例方法123456789101112131415161718192021222324252627282930- (NSString *)string;- (NSUInteger)scanLocation;- (void)setScanLocation:(NSUInteger)pos;//&amp;lt;span style=&quot;font-family: Arial, Helvetica, sans-ser">
+<meta name="twitter:title" content="Swift学习笔记">
+<meta name="twitter:description" content="构造器调用链的规则1234567Swift对构造器之间的调用链制定了如下3条规则：    子类构造器必须调用直接父类的指定构造器(如果有父类)    便利构造器必须调用同一个类中得其他构造器    便利构造器调用的构造器链的最终节点必须是制定构造器简化记忆为：    指定构造器总是向上代理（调用父类构造器）    便利构造器总是必须横向代理（调用当前类的其他构造器）
+
+两段式构造12345671、">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -60,7 +67,7 @@
   };
 </script>
 
-  <title> NSScanner使用方法 | 雨中漫步 </title>
+  <title> Swift学习笔记 | 雨中漫步 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
@@ -159,7 +166,7 @@
           
           
             
-              NSScanner使用方法
+              Swift学习笔记
             
           
         </h1>
@@ -168,7 +175,7 @@
       <div class="post-meta">
         <span class="post-time">
           發表於
-          <time itemprop="dateCreated" datetime="2015-09-20T21:38:34+08:00" content="2015-09-20">
+          <time itemprop="dateCreated" datetime="2015-09-20T22:07:49+08:00" content="2015-09-20">
             2015-09-20
           </time>
         </span>
@@ -179,8 +186,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/09/20/NSScanner使用方法/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/09/20/NSScanner使用方法/" itemprop="commentsCount"></span>
+              <a href="/2015/09/20/Swift学习笔记/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/09/20/Swift学习笔记/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -194,11 +201,16 @@
       
 
       
-        <span itemprop="articleBody"><h2 id="实例方法">实例方法</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">- (NSString *)string;</span><br><span class="line">- (NSUInteger)scanLocation;</span><br><span class="line">- (void)<span class="built_in">set</span>ScanLocation:(NSUInteger)pos;//&lt;span style=<span class="string">"font-family: Arial, Helvetica, sans-serif;"</span>&gt;设置开始扫描的位置&lt;/span&gt;</span><br><span class="line">- (void)<span class="built_in">set</span>CharactersToBeSkipped:(NSCharacterSet *)<span class="built_in">set</span>;//扫描的时候需要忽略的值</span><br><span class="line">- (void)<span class="built_in">set</span>CaseSensitive:(BOOL)flag; //是否区分大小写</span><br><span class="line">- (void)<span class="built_in">set</span>Locale:(id)locale; //大概意思是不同语言环境解释字符串的方式不一样，不懂</span><br><span class="line">- (NSCharacterSet *)charactersToBeSkipped; //扫描时所有被忽略的值</span><br><span class="line">- (BOOL)<span class="keyword">case</span>Sensitive;</span><br><span class="line">- (id)locale;</span><br><span class="line"></span><br><span class="line">- (BOOL)scanInt:(int *)value;  //是否找到一个十进制 int</span><br><span class="line">- (BOOL)scanInteger:(NSInteger *)value NS_AVAILABLE(<span class="number">10</span>_5, <span class="number">2</span>_0);  //是否找到一个十进制 NSInteger</span><br><span class="line">- (BOOL)scanHexLongLong:(unsigned long long *)result NS_AVAILABLE(<span class="number">10</span>_5, <span class="number">2</span>_0);   //是否找到<span class="number">16</span>进制的long long类型的数字</span><br><span class="line">- (BOOL)scanHexFloat:(<span class="built_in">float</span> *)result NS_AVAILABLE(<span class="number">10</span>_5, <span class="number">2</span>_0);		// Corresponding to %a or %A formatting. Requires <span class="string">"0x"</span> or <span class="string">"0X"</span> prefix. </span><br><span class="line">- (BOOL)scanHexDouble:(double *)result NS_AVAILABLE(<span class="number">10</span>_5, <span class="number">2</span>_0);		// Corresponding to %a or %A formatting. Requires <span class="string">"0x"</span> or <span class="string">"0X"</span> prefix. </span><br><span class="line">- (BOOL)scanHexInt:(unsigned *)value;		// Optionally prefixed with <span class="string">"0x"</span> or <span class="string">"0X"</span></span><br><span class="line">- (BOOL)scanLongLong:(long long *)value;</span><br><span class="line">- (BOOL)scanFloat:(<span class="built_in">float</span> *)value;</span><br><span class="line">- (BOOL)scanDouble:(double *)value;</span><br><span class="line"></span><br><span class="line">- (BOOL)scanString:(NSString *)string intoString:(NSString **)value; &lt;span style=<span class="string">"font-family: Arial, Helvetica, sans-serif;"</span>&gt;//&lt;/span&gt;&lt;span style=<span class="string">"font-family: Arial, Helvetica, sans-serif;"</span>&gt;从scan中扫描出<span class="built_in">set</span>中的数据放入value中&lt;/span&gt;</span><br><span class="line"></span><br><span class="line">- (BOOL)scanCharactersFromSet:(NSCharacterSet *)<span class="built_in">set</span> intoString:(NSString **)value;&lt;span style=<span class="string">"font-family: Arial, Helvetica, sans-serif;"</span>&gt;//&lt;/span&gt;&lt;span style=<span class="string">"font-family: Arial, Helvetica, sans-serif;"</span>&gt;从scan中扫描出<span class="built_in">set</span>中的数据放入value中&lt;/span&gt;</span><br><span class="line">- (BOOL)scanUpToString:(NSString *)string intoString:(NSString **)value;//&lt;span style=<span class="string">"font-family: Arial, Helvetica, sans-serif;"</span>&gt;从scan中扫描出<span class="built_in">set</span>之外的数据放入value中&lt;/span&gt;</span><br><span class="line">- (BOOL)scanUpToCharactersFromSet:(NSCharacterSet *)<span class="built_in">set</span> intoString:(NSString **)value;//从scan中扫描出<span class="built_in">set</span>之外的数据放入value中</span><br><span class="line">- (BOOL)isAtEnd;//是否扫描达到终点</span><br><span class="line"></span><br><span class="line">- (id)initWithString:(NSString *)string;</span><br><span class="line">+ (id)scannerWithString:(NSString *)string;</span><br><span class="line">+ (id)localizedScannerWithString:(NSString *)string;</span><br></pre></td></tr></table></figure>
-<h2 id="判断是否是float类型">判断是否是float类型</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">- (BOOL)isPureFloat:(NSString*)string&#123;      </span><br><span class="line">    NSScanner* scanner = [NSScanner scannerWithString:string];    </span><br><span class="line">    <span class="built_in">float</span> <span class="built_in">float</span>Val;    </span><br><span class="line">    <span class="built_in">return</span> [scanner scanFloat:&amp;<span class="built_in">float</span>Val] &amp;&amp; [scanner isAtEnd];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="判断是否是int类型">判断是否是int类型</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">- (BOOL)isPureInt:(NSString*)string&#123;    </span><br><span class="line">NSScanner* scanner = [NSScanner scannerWithString:string];    </span><br><span class="line">int intVal;    </span><br><span class="line"><span class="built_in">return</span> [scanner scanInt:&amp;intVal] &amp;&amp; [scanner isAtEnd];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="方法使用">方法使用</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">NSString * numStr = @<span class="string">"a1b2c3d4e5f6“；</span><br><span class="line">NSScanner * scanner = [NSScanner scannerWithString：numStr];</span><br><span class="line">NSCharacterSet * numSet = [NSCharacterSet decimalDigitCharacterSet];</span><br><span class="line">while （NO == [scanner isAtEnd]） &#123;</span><br><span class="line">    if （[scanner scanUpToCharacterFromSet：numSet intoString：NULL]） &#123;</span><br><span class="line">        int num;</span><br><span class="line">        if （[scanner scanInt：&amp;num]） &#123;</span><br><span class="line">            NSLog（@"</span>num ： %d”，num）;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">结果是： num ： <span class="number">1</span></span><br><span class="line">        num ： <span class="number">2</span></span><br><span class="line">        num ： <span class="number">3</span></span><br><span class="line">        num ： <span class="number">4</span></span><br><span class="line">        num ： <span class="number">5</span></span><br><span class="line">        num ： <span class="number">6</span></span><br></pre></td></tr></table></figure>
-<h2 id="读取下一行">读取下一行</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[scanner scanCharactersFromSet:[NSCharacterSet newlineCharacterSet]  intoString:NULL];</span><br></pre></td></tr></table></figure>
+        <span itemprop="articleBody"><h3 id="构造器调用链的规则">构造器调用链的规则</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Swift对构造器之间的调用链制定了如下<span class="number">3</span>条规则：</span><br><span class="line">    子类构造器必须调用直接父类的指定构造器(如果有父类)</span><br><span class="line">    便利构造器必须调用同一个类中得其他构造器</span><br><span class="line">    便利构造器调用的构造器链的最终节点必须是制定构造器</span><br><span class="line">简化记忆为：</span><br><span class="line">    指定构造器总是向上代理（调用父类构造器）</span><br><span class="line">    便利构造器总是必须横向代理（调用当前类的其他构造器）</span><br></pre></td></tr></table></figure>
+<p><img src="http://upload-images.jianshu.io/upload_images/545868-a5f483a4478e3c09.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="类的构造器链"></p>
+<h3 id="两段式构造">两段式构造</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>、类的构造需要两个阶段：</span><br><span class="line">        第一阶段：</span><br><span class="line">            程序调用子类的某个构造器；</span><br><span class="line">            为实例分配内存，此时实例的内存还没有被初始化；</span><br><span class="line">            指定构造器确保子类定义的所有实例存储属性都已经被赋值；</span><br><span class="line">            指定构造器将调用父类的构造器，完成父类定义的实例存储属性的初始化</span><br><span class="line">            沿着调用父类构造器的构造器链一直往往上执行，直到达到构造器链的最顶部</span><br></pre></td></tr></table></figure>
+<h3 id="安全检查">安全检查</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">安全检查<span class="number">1</span>：指定构造器必须先初始化当前类中定义的实例存储属性，然后才能向上调用父类构造器</span><br><span class="line">安全检查<span class="number">2</span>：指定构造器必须先向上调用父类构造器，然后才能对继承得到的属性赋值</span><br><span class="line">安全检查<span class="number">3</span>：便利构造器必须先调用同一个类的其他构造器，然后才能进行赋值</span><br><span class="line">安全检查<span class="number">4</span>：构造器在第一阶段完成之前，不能调用实例方法，不能读取实例属性</span><br><span class="line">建议：为实例存储属性指定初始值</span><br></pre></td></tr></table></figure>
+<h3 id="扩展的特性">扩展的特性</h3><blockquote>
+<p>  使用扩展添加属性、方法、可变方法、构造器、下标、嵌套类型<br>  可以使一个已有类型符合一个或者多个协议<br>  Swift的扩展与Objective-C的类目（category）类似，只是Swift中的扩展没有名字<br>  扩展并不是派生子类，因此不支持重写</p>
+</blockquote>
+<h3 id="扩展可以添加3种属性">扩展可以添加3种属性</h3><blockquote>
+<p>   类型存储属性<br>   实例计算属性<br>   类型计算属性</p>
+</blockquote>
 </span>
       
     </div>
@@ -210,13 +222,11 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/09/20/Swift学习笔记/" rel="prev">Swift学习笔记</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/09/19/Markdown学习记录/" rel="next">Markdown学习记录</a>
+              <a href="/2015/09/20/NSScanner使用方法/" rel="next">NSScanner使用方法</a>
             
           </div>
         </div>
@@ -241,8 +251,8 @@
         
           <div class="comments" id="comments">
             
-              <div class="ds-thread" data-thread-key="2015/09/20/NSScanner使用方法/"
-                   data-title="NSScanner使用方法" data-url="http://blog.goodheart-ios.com.cn/2015/09/20/NSScanner使用方法/">
+              <div class="ds-thread" data-thread-key="2015/09/20/Swift学习笔记/"
+                   data-title="Swift学习笔记" data-url="http://blog.goodheart-ios.com.cn/2015/09/20/Swift学习笔记/">
               </div>
             
           </div>
@@ -324,7 +334,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#实例方法"><span class="nav-number">1.</span> <span class="nav-text">实例方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#判断是否是float类型"><span class="nav-number">2.</span> <span class="nav-text">判断是否是float类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#判断是否是int类型"><span class="nav-number">3.</span> <span class="nav-text">判断是否是int类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方法使用"><span class="nav-number">4.</span> <span class="nav-text">方法使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#读取下一行"><span class="nav-number">5.</span> <span class="nav-text">读取下一行</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#构造器调用链的规则"><span class="nav-number">1.</span> <span class="nav-text">构造器调用链的规则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#两段式构造"><span class="nav-number">2.</span> <span class="nav-text">两段式构造</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安全检查"><span class="nav-number">3.</span> <span class="nav-text">安全检查</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#扩展的特性"><span class="nav-number">4.</span> <span class="nav-text">扩展的特性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#扩展可以添加3种属性"><span class="nav-number">5.</span> <span class="nav-text">扩展可以添加3种属性</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
