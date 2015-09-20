@@ -38,10 +38,34 @@
     {% else %}
       {{ page.content }}
     {% endif %}
+        <% if (page.comments ){ %>
+        <section id="comment">
+        <!-- 多说评论框 start -->
+        <div id="ds-thread" class="ds-thread" data-thread-key="<%= page.path %>" data-title="<%= page.title %>" data-url="<%= page.permalink %>"></div>
+        <!-- 多说评论框 end -->
+        <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+        <script type="text/javascript">
+        var duoshuoQuery = {short_name:"datoublog"};
+        true(function() {
+        truetruevar ds = document.createElement('script');
+        truetrueds.type = 'text/javascript';ds.async = true;
+        truetrueds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        truetrueds.charset = 'UTF-8';
+        truetrue(document.getElementsByTagName('head')[0]
+        truetrue || document.getElementsByTagName('body')[0]).appendChild(ds);
+        true})();
+        true</script>
+        <!-- 多说公共JS代码 end -->
+        </section>
+        <% } %>
   </div>
 
 {% endblock %}
 
 {% block sidebar %}
   {{ sidebar_template.render(false) }}
+{% endblock %}
+{% block comment_system %}
+{% include '_scripts/comments/duoshuo.swig' %}
+{% include '_scripts/comments/disqus.swig' %}
 {% endblock %}

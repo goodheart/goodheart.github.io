@@ -224,6 +224,17 @@ theme: next
 ## hexo 安装插件
  可以在hexo看到[插件列表](https://hexo.io/plugins/),希望了解某个插件的安装、使用等，点击该插件则会进入对应的github页面,详读对应的README即可，此处省略
 
+## 添加访问次数统计
+这里我使用的是[不蒜子](http://ibruce.info/2015/04/04/busuanzi/),配置很简单
+
+## 添加评论功能
+我用的是[多说评论](http://goodheart.duoshuo.com/admin/tools/)
+不同主题的配置不同，我找了几个不错教程，大家可以参考一下:
+[next主题](http://www.arao.me/2015/hexo-next-theme-optimize-base/)
+[light主题](http://zipperary.com/2013/05/30/hexo-guide-4/)
+[landscape主题](http://www.lichanglin.cn/%E5%9C%A8hexo%E4%B8%AD%E5%8A%A0%E5%85%A5%E5%A4%9A%E8%AF%B4%E8%AF%84%E8%AE%BA/)
+
+
 ## 实现多点同步的解决方案
  我的思路是：将hexo的_config.yml、source文件夹、themes文件夹通过github进行备份即可，每次写文章之前进行pull，写完之后进行push
  具体步骤如下:
