@@ -41,23 +41,16 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="构造器调用链的规则1234567Swift对构造器之间的调用链制定了如下3条规则：    子类构造器必须调用直接父类的指定构造器(如果有父类)    便利构造器必须调用同一个类中得其他构造器    便利构造器调用的构造器链的最终节点必须是制定构造器简化记忆为：    指定构造器总是向上代理（调用父类构造器）    便利构造器总是必须横向代理（调用当前类的其他构造器）
-
-两段式构造12345671、">
+<meta name="description" content="知识管理 效率为上 简约为美 时间无价">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Swift学习笔记">
-<meta property="og:url" content="http://blog.goodheart-ios.com.cn/2015/09/20/Swift学习笔记/index.html">
+<meta property="og:title" content="Markdown学习记录">
+<meta property="og:url" content="http://blog.goodheart-ios.com.cn/Markdown学习记录/index.html">
 <meta property="og:site_name" content="雨中漫步">
-<meta property="og:description" content="构造器调用链的规则1234567Swift对构造器之间的调用链制定了如下3条规则：    子类构造器必须调用直接父类的指定构造器(如果有父类)    便利构造器必须调用同一个类中得其他构造器    便利构造器调用的构造器链的最终节点必须是制定构造器简化记忆为：    指定构造器总是向上代理（调用父类构造器）    便利构造器总是必须横向代理（调用当前类的其他构造器）
-
-两段式构造12345671、">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/545868-a5f483a4478e3c09.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2015-09-20T14:22:29.000Z">
+<meta property="og:description" content="知识管理 效率为上 简约为美 时间无价">
+<meta property="og:updated_time" content="2015-09-19T17:14:45.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Swift学习笔记">
-<meta name="twitter:description" content="构造器调用链的规则1234567Swift对构造器之间的调用链制定了如下3条规则：    子类构造器必须调用直接父类的指定构造器(如果有父类)    便利构造器必须调用同一个类中得其他构造器    便利构造器调用的构造器链的最终节点必须是制定构造器简化记忆为：    指定构造器总是向上代理（调用父类构造器）    便利构造器总是必须横向代理（调用当前类的其他构造器）
-
-两段式构造12345671、">
+<meta name="twitter:title" content="Markdown学习记录">
+<meta name="twitter:description" content="知识管理 效率为上 简约为美 时间无价">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -67,7 +60,7 @@
   };
 </script>
 
-  <title> Swift学习笔记 | 雨中漫步 </title>
+  <title> Markdown学习记录 | 雨中漫步 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
@@ -166,7 +159,7 @@
           
           
             
-              Swift学习笔记
+              Markdown学习记录
             
           
         </h1>
@@ -175,8 +168,8 @@
       <div class="post-meta">
         <span class="post-time">
           發表於
-          <time itemprop="dateCreated" datetime="2015-09-20T22:07:49+08:00" content="2015-09-20">
-            2015-09-20
+          <time itemprop="dateCreated" datetime="2015-09-19T21:27:27+08:00" content="2015-09-19">
+            2015-09-19
           </time>
         </span>
 
@@ -186,8 +179,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/09/20/Swift学习笔记/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/09/20/Swift学习笔记/" itemprop="commentsCount"></span>
+              <a href="/Markdown学习记录/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="Markdown学习记录/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -201,17 +194,7 @@
       
 
       
-        <span itemprop="articleBody"><h3 id="构造器调用链的规则">构造器调用链的规则</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Swift对构造器之间的调用链制定了如下<span class="number">3</span>条规则：</span><br><span class="line">    子类构造器必须调用直接父类的指定构造器(如果有父类)</span><br><span class="line">    便利构造器必须调用同一个类中得其他构造器</span><br><span class="line">    便利构造器调用的构造器链的最终节点必须是制定构造器</span><br><span class="line">简化记忆为：</span><br><span class="line">    指定构造器总是向上代理（调用父类构造器）</span><br><span class="line">    便利构造器总是必须横向代理（调用当前类的其他构造器）</span><br></pre></td></tr></table></figure>
-<p><img src="http://upload-images.jianshu.io/upload_images/545868-a5f483a4478e3c09.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="类的构造器链"></p>
-<h3 id="两段式构造">两段式构造</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>、类的构造需要两个阶段：</span><br><span class="line">        第一阶段：</span><br><span class="line">            程序调用子类的某个构造器；</span><br><span class="line">            为实例分配内存，此时实例的内存还没有被初始化；</span><br><span class="line">            指定构造器确保子类定义的所有实例存储属性都已经被赋值；</span><br><span class="line">            指定构造器将调用父类的构造器，完成父类定义的实例存储属性的初始化</span><br><span class="line">            沿着调用父类构造器的构造器链一直往往上执行，直到达到构造器链的最顶部</span><br></pre></td></tr></table></figure>
-<h3 id="安全检查">安全检查</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">安全检查<span class="number">1</span>：指定构造器必须先初始化当前类中定义的实例存储属性，然后才能向上调用父类构造器</span><br><span class="line">安全检查<span class="number">2</span>：指定构造器必须先向上调用父类构造器，然后才能对继承得到的属性赋值</span><br><span class="line">安全检查<span class="number">3</span>：便利构造器必须先调用同一个类的其他构造器，然后才能进行赋值</span><br><span class="line">安全检查<span class="number">4</span>：构造器在第一阶段完成之前，不能调用实例方法，不能读取实例属性</span><br><span class="line">建议：为实例存储属性指定初始值</span><br></pre></td></tr></table></figure>
-<h3 id="扩展的特性">扩展的特性</h3><blockquote>
-<p>  使用扩展添加属性、方法、可变方法、构造器、下标、嵌套类型<br>  可以使一个已有类型符合一个或者多个协议<br>  Swift的扩展与Objective-C的类目（category）类似，只是Swift中的扩展没有名字<br>  扩展并不是派生子类，因此不支持重写</p>
-</blockquote>
-<h3 id="扩展可以添加3种属性">扩展可以添加3种属性</h3><blockquote>
-<p>   类型存储属性<br>   实例计算属性<br>   类型计算属性</p>
-</blockquote>
-</span>
+        <span itemprop="articleBody"></span>
       
     </div>
 
@@ -222,11 +205,13 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/NSScanner使用方法/" rel="prev">NSScanner使用方法</a>
+            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/09/20/NSScanner使用方法/" rel="next">NSScanner使用方法</a>
+              <a href="/ios技巧记录/" rel="next">ios技巧记录</a>
             
           </div>
         </div>
@@ -251,8 +236,8 @@
         
           <div class="comments" id="comments">
             
-              <div class="ds-thread" data-thread-key="2015/09/20/Swift学习笔记/"
-                   data-title="Swift学习笔记" data-url="http://blog.goodheart-ios.com.cn/2015/09/20/Swift学习笔记/">
+              <div class="ds-thread" data-thread-key="Markdown学习记录/"
+                   data-title="Markdown学习记录" data-url="http://blog.goodheart-ios.com.cn/Markdown学习记录/">
               </div>
             
           </div>
@@ -334,7 +319,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#构造器调用链的规则"><span class="nav-number">1.</span> <span class="nav-text">构造器调用链的规则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#两段式构造"><span class="nav-number">2.</span> <span class="nav-text">两段式构造</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安全检查"><span class="nav-number">3.</span> <span class="nav-text">安全检查</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#扩展的特性"><span class="nav-number">4.</span> <span class="nav-text">扩展的特性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#扩展可以添加3种属性"><span class="nav-number">5.</span> <span class="nav-text">扩展可以添加3种属性</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目錄</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
