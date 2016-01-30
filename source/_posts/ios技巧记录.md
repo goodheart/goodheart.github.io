@@ -107,6 +107,10 @@ Xcode --〉Project --〉Build Settings --〉搜索Compile Sources As ,并将其�
 ```bash
 pod 'SDURLCache', ：path=>‘/Users/janema/Github/SDURLCache/SDURLCache.podspec'
 ```
+### Cocoapods引入github库
+``` bash
+pod "MusicPlayer", :git => 'https://github.com/goodheart/MusicPlayer.git'
+```
 
 ### 给objc类些hash方法
 ``` bash
