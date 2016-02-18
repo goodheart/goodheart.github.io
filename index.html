@@ -198,7 +198,7 @@
 
       
         
-          <span itemprop="articleBody"><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>、在使用微信作为第三方登陆时，如果公司的app用同一套用户体系，那么使用unionId作为一个用户的唯一标识，而不是shareSDK提供的uid，因为在同一微信开发者账号中，用户用微信登陆时，它的unionId是不变的，而uid会改变。在做公司第一个app时就要考虑到，以后可能会有其他app也用这一套用户体系。微博、QQ等使用uid即可，暂时没有发现问题。</span><br></pre></td></tr></table></figure>
+          <span itemprop="articleBody"><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>、在使用微信作为第三方登陆时，如果公司的app用同一套用户体系，那么使用unionId作为一个用户的唯一标识，而不是shareSDK提供的uid，因为在同一微信开发者账号中，用户用微信登陆时，它的unionId是不变的，而uid会改变。在做公司第一个app时就要考虑到，以后可能会有其他app也用这一套用户体系。微博、QQ等使用uid即可，暂时没有发现问题。</span><br><span class="line"><span class="number">2</span>、最近因为证书的问题导致企业账号发布的应用都无法下载安装，所以总结两点：<span class="number">1</span>、苹果账号和密码尽量控制在负责人手里，不要轻易流出去；<span class="number">2</span>、轻易不要revoke证书，尤其distribute证书。这可是大bug,大骚乱……</span><br></pre></td></tr></table></figure>
 </span>
         
       
