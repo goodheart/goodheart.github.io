@@ -41,16 +41,16 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="知识管理 效率为上 简约为美 时间无价">
+<meta name="description" content="12345678910NSMutableParagraphStyle * paragraphStyle = [[NSMutableParagraphStyle alloc] init];paragraphStyle.lineSpacing = 0.0f;paragraphStyle.alignment = NSTextAlignmentJustified;//关键代码paragraphStyle.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Markdown学习记录">
-<meta property="og:url" content="http://blog.goodheart-ios.com.cn/Markdown学习记录/index.html">
+<meta property="og:title" content="文本右侧对齐">
+<meta property="og:url" content="http://blog.goodheart-ios.com.cn/文本右侧对齐/index.html">
 <meta property="og:site_name" content="雨中漫步">
-<meta property="og:description" content="知识管理 效率为上 简约为美 时间无价">
-<meta property="og:updated_time" content="2015-09-19T17:14:45.000Z">
+<meta property="og:description" content="12345678910NSMutableParagraphStyle * paragraphStyle = [[NSMutableParagraphStyle alloc] init];paragraphStyle.lineSpacing = 0.0f;paragraphStyle.alignment = NSTextAlignmentJustified;//关键代码paragraphStyle.">
+<meta property="og:updated_time" content="2016-02-29T02:50:13.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Markdown学习记录">
-<meta name="twitter:description" content="知识管理 效率为上 简约为美 时间无价">
+<meta name="twitter:title" content="文本右侧对齐">
+<meta name="twitter:description" content="12345678910NSMutableParagraphStyle * paragraphStyle = [[NSMutableParagraphStyle alloc] init];paragraphStyle.lineSpacing = 0.0f;paragraphStyle.alignment = NSTextAlignmentJustified;//关键代码paragraphStyle.">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -60,7 +60,7 @@
   };
 </script>
 
-  <title> Markdown学习记录 | 雨中漫步 </title>
+  <title> 文本右侧对齐 | 雨中漫步 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
@@ -159,7 +159,7 @@
           
           
             
-              Markdown学习记录
+              文本右侧对齐
             
           
         </h1>
@@ -168,8 +168,8 @@
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2015-09-19T21:27:27+08:00" content="2015-09-19">
-            2015-09-19
+          <time itemprop="dateCreated" datetime="2016-02-29T10:47:16+08:00" content="2016-02-29">
+            2016-02-29
           </time>
         </span>
 
@@ -179,8 +179,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/Markdown学习记录/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="Markdown学习记录/" itemprop="commentsCount"></span>
+              <a href="/文本右侧对齐/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="文本右侧对齐/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -194,7 +194,8 @@
       
 
       
-        <span itemprop="articleBody"></span>
+        <span itemprop="articleBody"><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">NSMutableParagraphStyle</span> * paragraphStyle = [[<span class="built_in">NSMutableParagraphStyle</span> alloc] init];</span><br><span class="line">paragraphStyle<span class="variable">.lineSpacing</span> = <span class="number">0.0</span>f;</span><br><span class="line">paragraphStyle<span class="variable">.alignment</span> = <span class="built_in">NSTextAlignmentJustified</span>;<span class="comment">//关键代码</span></span><br><span class="line">paragraphStyle<span class="variable">.lineBreakMode</span> = <span class="built_in">NSLineBreakByWordWrapping</span>;</span><br><span class="line"> <span class="built_in">NSMutableAttributedString</span> * attributedStringM = [[<span class="built_in">NSMutableAttributedString</span> alloc] initWithString:text attributes:@&#123;<span class="built_in">NSParagraphStyleAttributeName</span> : paragraphStyle,<span class="built_in">NSFontAttributeName</span> : [<span class="built_in">UIFont</span> systemFontOfSize:<span class="number">16.0</span>f]&#125;];</span><br><span class="line">					    </span><br><span class="line"><span class="built_in">UITextView</span> * textView = [[<span class="built_in">UITextView</span> alloc] initWithFrame:<span class="built_in">CGRectMake</span>(<span class="number">10</span>, <span class="number">20</span>, <span class="built_in">CGRectGetWidth</span>(<span class="keyword">self</span><span class="variable">.view</span><span class="variable">.frame</span>) - <span class="number">20</span>, <span class="built_in">CGRectGetHeight</span>(<span class="keyword">self</span><span class="variable">.view</span><span class="variable">.frame</span>) - <span class="number">20</span>)];</span><br><span class="line">textView<span class="variable">.attributedText</span> = attributedStringM;</span><br><span class="line">textView<span class="variable">.editable</span> = <span class="literal">NO</span>;</span><br><span class="line">[<span class="keyword">self</span><span class="variable">.view</span> addSubview:textView];</span><br></pre></td></tr></table></figure>
+</span>
       
     </div>
 
@@ -205,13 +206,11 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/NSScanner使用方法/" rel="prev">NSScanner使用方法</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/ios技巧记录/" rel="next">ios技巧记录</a>
+              <a href="/平常开发遇到的bug/" rel="next">平常开发遇到的bug</a>
             
           </div>
         </div>
@@ -236,8 +235,8 @@
         
           <div class="comments" id="comments">
             
-              <div class="ds-thread" data-thread-key="Markdown学习记录/"
-                   data-title="Markdown学习记录" data-url="http://blog.goodheart-ios.com.cn/Markdown学习记录/">
+              <div class="ds-thread" data-thread-key="文本右侧对齐/"
+                   data-title="文本右侧对齐" data-url="http://blog.goodheart-ios.com.cn/文本右侧对齐/">
               </div>
             
           </div>

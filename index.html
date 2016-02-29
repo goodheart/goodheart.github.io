@@ -112,7 +112,7 @@
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             <i class="menu-item-icon icon-next-home"></i> <br />
-            首頁
+            首页
           </a>
         </li>
       
@@ -120,7 +120,7 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             <i class="menu-item-icon icon-next-archives"></i> <br />
-            歸檔
+            归档
           </a>
         </li>
       
@@ -128,7 +128,7 @@
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
             <i class="menu-item-icon icon-next-tags"></i> <br />
-            標籤
+            标签
           </a>
         </li>
       
@@ -160,6 +160,75 @@
           
           
             
+              <a class="post-title-link" href="/文本右侧对齐/" itemprop="url">
+                文本右侧对齐
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于
+          <time itemprop="dateCreated" datetime="2016-02-29T10:47:16+08:00" content="2016-02-29">
+            2016-02-29
+          </time>
+        </span>
+
+        
+
+        
+          
+            <span class="post-comments-count">
+              &nbsp; | &nbsp;
+              <a href="/文本右侧对齐/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="文本右侧对齐/" itemprop="commentsCount"></span>
+              </a>
+            </span>
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody"><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">NSMutableParagraphStyle</span> * paragraphStyle = [[<span class="built_in">NSMutableParagraphStyle</span> alloc] init];</span><br><span class="line">paragraphStyle<span class="variable">.lineSpacing</span> = <span class="number">0.0</span>f;</span><br><span class="line">paragraphStyle<span class="variable">.alignment</span> = <span class="built_in">NSTextAlignmentJustified</span>;<span class="comment">//关键代码</span></span><br><span class="line">paragraphStyle<span class="variable">.lineBreakMode</span> = <span class="built_in">NSLineBreakByWordWrapping</span>;</span><br><span class="line"> <span class="built_in">NSMutableAttributedString</span> * attributedStringM = [[<span class="built_in">NSMutableAttributedString</span> alloc] initWithString:text attributes:@&#123;<span class="built_in">NSParagraphStyleAttributeName</span> : paragraphStyle,<span class="built_in">NSFontAttributeName</span> : [<span class="built_in">UIFont</span> systemFontOfSize:<span class="number">16.0</span>f]&#125;];</span><br><span class="line">					    </span><br><span class="line"><span class="built_in">UITextView</span> * textView = [[<span class="built_in">UITextView</span> alloc] initWithFrame:<span class="built_in">CGRectMake</span>(<span class="number">10</span>, <span class="number">20</span>, <span class="built_in">CGRectGetWidth</span>(<span class="keyword">self</span><span class="variable">.view</span><span class="variable">.frame</span>) - <span class="number">20</span>, <span class="built_in">CGRectGetHeight</span>(<span class="keyword">self</span><span class="variable">.view</span><span class="variable">.frame</span>) - <span class="number">20</span>)];</span><br><span class="line">textView<span class="variable">.attributedText</span> = attributedStringM;</span><br><span class="line">textView<span class="variable">.editable</span> = <span class="literal">NO</span>;</span><br><span class="line">[<span class="keyword">self</span><span class="variable">.view</span> addSubview:textView];</span><br></pre></td></tr></table></figure>
+</span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
               <a class="post-title-link" href="/平常开发遇到的bug/" itemprop="url">
                 平常开发遇到的bug
               </a>
@@ -170,7 +239,7 @@
 
       <div class="post-meta">
         <span class="post-time">
-          發表於
+          发表于
           <time itemprop="dateCreated" datetime="2016-02-17T13:27:41+08:00" content="2016-02-17">
             2016-02-17
           </time>
@@ -239,7 +308,7 @@
 
       <div class="post-meta">
         <span class="post-time">
-          發表於
+          发表于
           <time itemprop="dateCreated" datetime="2016-02-01T10:14:15+08:00" content="2016-02-01">
             2016-02-01
           </time>
@@ -307,7 +376,7 @@
 
       <div class="post-meta">
         <span class="post-time">
-          發表於
+          发表于
           <time itemprop="dateCreated" datetime="2015-09-23T20:56:27+08:00" content="2015-09-23">
             2015-09-23
           </time>
@@ -376,7 +445,7 @@
 
       <div class="post-meta">
         <span class="post-time">
-          發表於
+          发表于
           <time itemprop="dateCreated" datetime="2015-09-20T22:07:49+08:00" content="2015-09-20">
             2015-09-20
           </time>
@@ -454,7 +523,7 @@
 
       <div class="post-meta">
         <span class="post-time">
-          發表於
+          发表于
           <time itemprop="dateCreated" datetime="2015-09-20T21:38:34+08:00" content="2015-09-20">
             2015-09-20
           </time>
@@ -527,7 +596,7 @@
 
       <div class="post-meta">
         <span class="post-time">
-          發表於
+          发表于
           <time itemprop="dateCreated" datetime="2015-09-19T21:27:27+08:00" content="2015-09-19">
             2015-09-19
           </time>
@@ -595,7 +664,7 @@
 
       <div class="post-meta">
         <span class="post-time">
-          發表於
+          发表于
           <time itemprop="dateCreated" datetime="2015-09-18T16:51:39+08:00" content="2015-09-18">
             2015-09-18
           </time>
@@ -674,7 +743,7 @@
 
       <div class="post-meta">
         <span class="post-time">
-          發表於
+          发表于
           <time itemprop="dateCreated" datetime="2015-09-18T15:01:56+08:00" content="2015-09-18">
             2015-09-18
           </time>
@@ -742,7 +811,7 @@
 
       <div class="post-meta">
         <span class="post-time">
-          發表於
+          发表于
           <time itemprop="dateCreated" datetime="2015-09-18T09:58:04+08:00" content="2015-09-18">
             2015-09-18
           </time>
@@ -791,116 +860,13 @@
 
 
     
-      
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/在mac上使用github-hexo搭建博客的简单记录/" itemprop="url">
-                在mac上使用github+hexo搭建博客的简单记录
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          發表於
-          <time itemprop="dateCreated" datetime="2015-09-17T16:09:00+08:00" content="2015-09-17">
-            2015-09-17
-          </time>
-        </span>
-
-        
-
-        
-          
-            <span class="post-comments-count">
-              &nbsp; | &nbsp;
-              <a href="/在mac上使用github-hexo搭建博客的简单记录/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="在mac上使用github-hexo搭建博客的简单记录/" itemprop="commentsCount"></span>
-              </a>
-            </span>
-          
-        
-      </div>
-    </header>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody"><h2 id="hexo的安装">hexo的安装</h2><p>安装nvm(Node Version Manager)<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.<span class="number">26.1</span>/install.sh | bash</span><br><span class="line">或者使用 Wget</span><br><span class="line">wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.<span class="number">26.1</span>/install.sh | bash</span><br><span class="line"> 具体可以参考：https://github.com/creationix/nvm的README.markdown</span><br></pre></td></tr></table></figure></p>
-<p>命令执行界面如下<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.<span class="number">26.1</span>/install.sh | bash</span><br><span class="line">% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current</span><br><span class="line">Dload  Upload   Total   Spent    Left  Speed</span><br><span class="line"><span class="number">100</span>  <span class="number">7728</span>  <span class="number">100</span>  <span class="number">7728</span>    <span class="number">0</span>     <span class="number">0</span>  <span class="number">19952</span>      <span class="number">0</span> --:--:-- --:--:-- --:--:-- <span class="number">19917</span></span><br><span class="line">=&gt; Downloading nvm as script to <span class="string">'/home/blog/.nvm'</span></span><br><span class="line">=&gt; Appending <span class="built_in">source</span> string to /home/blog/.bashrc</span><br><span class="line">=&gt; You can now start using nvm</span><br></pre></td></tr></table></figure></p>
-<p>下一步 使用nvm安装node.js<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ ls <span class="operator">-a</span></span><br><span class="line">.  ..  .bash_<span class="built_in">logout</span>  .bashrc  .nvm  .profile</span><br><span class="line">$ <span class="built_in">source</span> ~/.nvm/nvm.sh </span><br><span class="line">$ nvm install <span class="number">0.10</span></span><br><span class="line"><span class="comment">######################################################################## 100.0%</span></span><br><span class="line">Now using node v0.<span class="number">10.40</span> (npm v1.<span class="number">4.28</span>)</span><br></pre></td></tr></table></figure></p>
-<p>下一步 安装hexo并检查是否安装成功<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo</span><br><span class="line">$ hexo --version</span><br><span class="line"><span class="comment">### 安装nvm(Node Version Manager)</span></span><br><span class="line">``` bash</span><br><span class="line">curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.<span class="number">26.1</span>/install.sh | bash</span><br><span class="line">or Wget</span><br><span class="line">  wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.<span class="number">26.1</span>/install.sh | bash</span><br><span class="line"> 具体可以参考：https://github.com/creationix/nvm的README.markdown</span><br></pre></td></tr></table></figure></p>
-<p> 真实界面如下<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">blog@LECLOUD:~$ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.<span class="number">26.1</span>/install.sh | bash</span><br><span class="line">  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current</span><br><span class="line">  Dload  Upload   Total   Spent    Left  Speed</span><br><span class="line">  <span class="number">100</span>  <span class="number">7728</span>  <span class="number">100</span>  <span class="number">7728</span>    <span class="number">0</span>     <span class="number">0</span>  <span class="number">19952</span>      <span class="number">0</span> --:--:-- --:--:-- --:--:-- <span class="number">19917</span></span><br><span class="line">   =&gt; Downloading nvm as script to <span class="string">'/home/blog/.nvm'</span></span><br><span class="line">   =&gt; Appending <span class="built_in">source</span> string to /home/blog/.bashrc</span><br><span class="line">   =&gt; You can now start using nvm</span><br></pre></td></tr></table></figure></p>
-<p>接着使用nvm安装node.js<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">blog@LECLOUD:~$ ls <span class="operator">-a</span></span><br><span class="line">.  ..  .bash_<span class="built_in">logout</span>  .bashrc  .nvm  .profile</span><br><span class="line">blog@LECLOUD:~$ <span class="built_in">source</span> ~/.nvm/nvm.sh </span><br><span class="line">blog@LECLOUD:~$ nvm install <span class="number">0.10</span></span><br><span class="line"><span class="comment">######################################################################## 100.0%</span></span><br><span class="line">Now using node v0.<span class="number">10.40</span> (npm v1.<span class="number">4.28</span>)</span><br></pre></td></tr></table></figure></p>
-<p>下一步 安装hexo并检查hexo是否安装成功<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">blog@LECLOUD:~$ npm install -g hexo</span><br><span class="line">blog@LECLOUD:~$ hexo --version</span><br><span class="line">hexo-cli: <span class="number">0.1</span>.<span class="number">8</span></span><br><span class="line">os: Linux <span class="number">3.16</span>.<span class="number">0</span>-<span class="number">23</span>-generic linux x64</span><br><span class="line">http_parser: <span class="number">1.0</span></span><br><span class="line">node: <span class="number">0.10</span>.<span class="number">40</span></span><br><span class="line">v8: <span class="number">3.14</span>.<span class="number">5.9</span></span><br><span class="line">ares: <span class="number">1.9</span>.<span class="number">0</span>-DEV</span><br><span class="line">uv: <span class="number">0.10</span>.<span class="number">36</span></span><br><span class="line">zlib: <span class="number">1.2</span>.<span class="number">8</span></span><br><span class="line">modules: <span class="number">11</span></span><br><span class="line">openssl: <span class="number">1.0</span>.<span class="number">1</span>p</span><br></pre></td></tr></table></figure></p>
-<h2 id="hexo的使用">hexo的使用</h2><p>创建一个文件夹并初始化blog<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir ~/blog</span><br><span class="line">$ ls <span class="operator">-a</span></span><br><span class="line">.  ..  .bash_<span class="built_in">logout</span>  .bashrc  blog  .npm  .nvm  .profile</span><br><span class="line">$ <span class="built_in">cd</span> blog/</span><br><span class="line">$ hexo init</span><br><span class="line">INFO  Copying data to ~/blog</span><br><span class="line">INFO  You are almost <span class="keyword">done</span>! Don<span class="string">'t forget to run '</span>npm install<span class="string">' before you start blogging with Hexo!</span><br><span class="line">$ ls</span><br><span class="line">_config.yml  package.json  scaffolds  source  themes</span></span><br></pre></td></tr></table></figure></p>
-<p>新建一篇文章<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"这是一篇测试文章"</span></span><br><span class="line">INFO  Created: ~/git/blog/<span class="built_in">source</span>/_posts/这是一篇测试文章.md</span><br></pre></td></tr></table></figure></p>
-<p>使用Vim编辑新建的文章,如果vim使用不熟，可以使用<a href="/2015/09/18/使用sublime-text写Markdown并预览/">sublime text</a>工具<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vim <span class="built_in">source</span>/_posts/这是一篇测试文章.md</span><br></pre></td></tr></table></figure></p>
-<p>使用Markdown编写文章,可参考<a href="/2015/09/19/Markdown学习记录/">Markdown学习记录</a><br>文章写完之后，使用:wq退出并保存文章<br>生成html文件,就会在/blog/public文件夹下边生成相应的代码,之后部署到github的就是public里面的文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br><span class="line">INFO  Files loaded <span class="keyword">in</span> <span class="number">81</span> ms</span><br><span class="line">INFO  Generated: js/script.js</span><br><span class="line">INFO  Generated: fancybox/jquery.fancybox.pack.js</span><br><span class="line">INFO  Generated: fancybox/jquery.fancybox.js</span><br><span class="line">INFO  Generated: fancybox/jquery.fancybox.css</span><br><span class="line">............</span><br></pre></td></tr></table></figure></p>
-<p>如果执行hexo generate之后public目录下文件如下,没有文章的静态页面：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> public/</span><br><span class="line">$ ls</span><br><span class="line">css		fancybox	js</span><br></pre></td></tr></table></figure></p>
-<p>我是执行npm install之后成功生成了文章的静态页面<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$ npm install</span><br><span class="line">enerator-tag@<span class="number">0.1</span>.<span class="number">2</span> node_modules/hexo-generator-tag</span><br><span class="line">├── object-assign@<span class="number">2.1</span>.<span class="number">1</span></span><br><span class="line">└── hexo-pagination@<span class="number">0.0</span>.<span class="number">2</span> (utils-merge@<span class="number">1.0</span>.<span class="number">0</span>)</span><br><span class="line">...............</span><br><span class="line">$ hexo g</span><br><span class="line">INFO  Files loaded <span class="keyword">in</span> <span class="number">1.99</span> s</span><br><span class="line">$ <span class="built_in">cd</span> public/</span><br><span class="line">$ ls</span><br><span class="line"><span class="number">2015</span>  archives  css  fancybox  index.html  js</span><br></pre></td></tr></table></figure></p>
-<p>在部署之前希望预览一下<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br><span class="line">INFO  Hexo is running at http://<span class="number">0.0</span>.<span class="number">0.0</span>:<span class="number">4000</span>/. Press Ctrl+C to stop.</span><br></pre></td></tr></table></figure></p>
-<p>如果出现错误，可能是hexo server这个命令没有安装,可以用下面这个命令解决，然后再执行上面的hexo server命令.hexo-server的<a href="https://hexo.io/docs/server.html" target="_blank" rel="external">帮助页面</a>,</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-server --save</span><br></pre></td></tr></table></figure>
-<p>下一步 创建一个文件夹并初始化blog<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir ~/blog</span><br><span class="line">$ ls <span class="operator">-a</span></span><br><span class="line">.  ..  .bash_<span class="built_in">logout</span>  .bashrc  blog  .npm  .nvm  .profile</span><br><span class="line">$ <span class="built_in">cd</span> blog/</span><br><span class="line">$ hexo init</span><br><span class="line">NFO  Copying data to ~/blog</span><br><span class="line">INFO  You are almost <span class="keyword">done</span>! Don<span class="string">'t forget to run '</span>npm install<span class="string">' before you start blogging with Hexo!</span><br><span class="line">$ ls</span><br><span class="line">_config.yml  package.json  scaffolds  source  themes</span></span><br></pre></td></tr></table></figure></p>
-<p>同时同步到github和gitcafe<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repo: </span><br><span class="line">        github: https://github.com/goodheart/goodheart.github.io.git,master</span><br><span class="line">        gitcafe: https://gitcafe.com/goodheart/goodheart.git,gitcafe-pages</span><br></pre></td></tr></table></figure></p>
-<p>如果出现ERROR Deployer not found: git,可以使用下面的命令解决,<br>plugins:<br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">如果出现<span class="constant">ERROR Deployer </span><span class="keyword">not</span> <span class="symbol">found:</span> git</span><br><span class="line"><span class="variable">$ </span>npm install hexo-deployer-git --save</span><br><span class="line"><span class="symbol">https:</span>/<span class="regexp">/hexo.io/docs</span><span class="regexp">/deployment.html</span></span><br></pre></td></tr></table></figure></p>
-<p>注意：关闭terminal之后再次使用hexo可能无法使用，处理方法如下<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">hexo: <span class="built_in">command</span> not found</span><br><span class="line">$ nvm use <span class="number">0.10</span></span><br><span class="line">Now using node v0.<span class="number">10.40</span> (npm v1.<span class="number">4.28</span>)</span><br><span class="line">$ hexo --version</span><br><span class="line"><span class="comment">#### 注意：关闭terminal之后再次使用hexo可能无法使用，处理方法如下</span></span><br><span class="line">``` bash</span><br><span class="line">hexo: <span class="built_in">command</span> not found</span><br><span class="line">blog@LECLOUD:~/blog$ nvm use <span class="number">0.10</span></span><br><span class="line">Now using node v0.<span class="number">10.40</span> (npm v1.<span class="number">4.28</span>)</span><br><span class="line">blog@LECLOUD:~/blog$ hexo --version</span><br><span class="line">hexo: <span class="number">3.1</span>.<span class="number">1</span></span><br><span class="line">os: Linux <span class="number">3.16</span>.<span class="number">0</span>-<span class="number">23</span>-generic linux x64</span><br><span class="line">http_parser: <span class="number">1.0</span></span><br><span class="line">node: <span class="number">0.10</span>.<span class="number">40</span></span><br><span class="line">v8: <span class="number">3.14</span>.<span class="number">5.9</span></span><br><span class="line">ares: <span class="number">1.9</span>.<span class="number">0</span>-DEV</span><br><span class="line">uv: <span class="number">0.10</span>.<span class="number">36</span></span><br><span class="line">zlib: <span class="number">1.2</span>.<span class="number">8</span></span><br><span class="line">modules: <span class="number">11</span></span><br><span class="line">openssl: <span class="number">1.0</span>.<span class="number">1</span>p</span><br></pre></td></tr></table></figure></p>
-<h2 id="hexo换主题">hexo换主题</h2><p>进入blog/themes/文件夹<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ./themes/</span><br><span class="line">$ ls</span><br><span class="line">landscape	light		next</span><br></pre></td></tr></table></figure></p>
-<p>目前我下载了light和next主题，landscape主题是默认的<br>可以在<a href="https://github.com/search?utf8=%E2%9C%93&amp;q=hexo-theme" target="_blank" rel="external">github</a>或<a href="https://hexo.io/themes/" target="_blank" rel="external">hexo</a>或网上找，大部分主题安装也简单：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ./themes/</span><br><span class="line">$ git <span class="built_in">clone</span> https://github.com/iissnan/hexo-theme-next.git next</span><br><span class="line">Cloning into <span class="string">'next'</span>...</span><br><span class="line">remote: Counting objects: <span class="number">3485</span>, done.</span><br><span class="line">remote: Total <span class="number">3485</span> (delta <span class="number">0</span>), reused <span class="number">0</span> (delta <span class="number">0</span>), pack-reused <span class="number">3484</span></span><br><span class="line">Receiving objects: <span class="number">100</span>% (<span class="number">3485</span>/<span class="number">3485</span>), <span class="number">9.00</span> MiB | <span class="number">16.00</span> KiB/s, done.</span><br><span class="line">Resolving deltas: <span class="number">100</span>% (<span class="number">1832</span>/<span class="number">1832</span>), done.</span><br><span class="line">Checking connectivity... done.</span><br></pre></td></tr></table></figure></p>
-<p>最好给主题用个简单的名字，比如hexo-theme-next直接用next,设置时简单方便好记<br>接下来修改 _confit.yml文件,然后重新执行hexo generate即可</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Extensions</span></span><br><span class="line"><span class="comment">## Plugins: http://hexo.io/plugins/</span></span><br><span class="line"><span class="comment">## Themes: http://hexo.io/themes/                                           </span></span><br><span class="line"><span class="comment">#theme: landscape</span></span><br><span class="line"><span class="comment">#theme: light</span></span><br><span class="line">theme: next</span><br></pre></td></tr></table></figure>
-<h2 id="hexo_安装插件">hexo 安装插件</h2><p> 可以在hexo看到<a href="https://hexo.io/plugins/" target="_blank" rel="external">插件列表</a>,希望了解某个插件的安装、使用等，点击该插件则会进入对应的github页面,详读对应的README即可，此处省略</p>
-<h2 id="添加访问次数统计">添加访问次数统计</h2><p>这里我使用的是<a href="http://ibruce.info/2015/04/04/busuanzi/" target="_blank" rel="external">不蒜子</a>,配置很简单</p>
-<h2 id="添加评论功能">添加评论功能</h2><p>我用的是<a href="http://goodheart.duoshuo.com/admin/tools/" target="_blank" rel="external">多说评论</a><br>不同主题的配置不同，我找了几个不错教程，大家可以参考一下:<br><a href="http://www.arao.me/2015/hexo-next-theme-optimize-base/" target="_blank" rel="external">next主题</a><br><a href="http://zipperary.com/2013/05/30/hexo-guide-4/" target="_blank" rel="external">light主题</a><br><a href="http://www.lichanglin.cn/%E5%9C%A8hexo%E4%B8%AD%E5%8A%A0%E5%85%A5%E5%A4%9A%E8%AF%B4%E8%AF%84%E8%AE%BA/" target="_blank" rel="external">landscape主题</a></p>
-<h2 id="实现多点同步的解决方案">实现多点同步的解决方案</h2><p> 我的思路是：将hexo的_config.yml、source文件夹、themes文件夹通过github进行备份即可，每次写文章之前进行pull，写完之后进行push<br> 具体步骤如下:</p>
-<ul>
-<li><p>在第一次写博客的电脑上</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>、将上面的事做完：配置博客、写文章、部署文章</span><br><span class="line"><span class="number">2</span>、创建git仓库</span><br><span class="line">    $ git init</span><br><span class="line">    Initialized empty Git repository <span class="keyword">in</span> /home/blog/blog/.git/</span><br><span class="line"><span class="number">3</span>、$ git remote add origin https://github.com/goodheart/goodheart.github.io.git</span><br><span class="line"><span class="number">4</span>、创建并进入pagesSource分支</span><br><span class="line">    $ git checkout -b pagesSource</span><br><span class="line">    Switched to a new branch <span class="string">'pagesSource'</span></span><br><span class="line"><span class="number">5</span>、将_config.yml、<span class="built_in">source</span>、themes添加到git中进行管理</span><br><span class="line">    $ git add _config.yml <span class="built_in">source</span>/ themes/ </span><br><span class="line"><span class="number">6</span>、本地提交</span><br><span class="line">	$ git commit -m <span class="string">'first commit'</span></span><br><span class="line"><span class="number">7</span>、提交到github</span><br><span class="line">    git push -u origin pagesSource</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>新的地点写博客步骤</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>、创建blog文件夹,进入blog并执行hexo init初始化</span><br><span class="line"><span class="number">2</span>、删除_config.yml <span class="built_in">source</span> 以及themes</span><br><span class="line">   $ rm _config.yml </span><br><span class="line">   $ rm -rf <span class="built_in">source</span>/</span><br><span class="line">   $ rm -rf themes/</span><br><span class="line"><span class="number">3</span>、初始化git仓库</span><br><span class="line">   $ git init</span><br><span class="line">   Initialized empty Git repository <span class="keyword">in</span> /home/blog/blog/.git/</span><br><span class="line"><span class="number">4</span>、$ git remote add origin https://github.com/goodheart/goodheart.github.io.git</span><br><span class="line"><span class="number">5</span>、创建并进入分支</span><br><span class="line">   $ git checkout -b pagesSource</span><br><span class="line">   Switched to a new branch <span class="string">'pagesSource'</span></span><br><span class="line"><span class="number">6</span>、将goodheart.github.io的pagesSource分支的代码pull到本地</span><br><span class="line">   git pull -u origin pagesSource</span><br><span class="line">   remote: Counting objects: <span class="number">127</span>, done.</span><br><span class="line">   remote: Compressing objects: <span class="number">100</span>% (<span class="number">2</span>/<span class="number">2</span>), done.</span><br><span class="line">   remote: Total <span class="number">127</span> (delta <span class="number">0</span>), reused <span class="number">0</span> (delta <span class="number">0</span>), pack-reused <span class="number">125</span></span><br><span class="line"><span class="number">7</span>、后续的步骤正常执行，只是themes主题需要稍微注意下</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>在之前写过文章的blog里面进行提交时步骤</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>查看当前分支名称并切换到pagsSource分支</span><br><span class="line">	majiandeMacBook-Pro:blog majian$ git branch</span><br><span class="line">	* pagesSource</span><br><span class="line"><span class="number">2</span>、将_config.yml <span class="built_in">source</span>/ themes/加入到git中，当然也可以使用git status <span class="operator">-s</span>查看状态，然后将状态改变的文件加入git，我这里是为了方便</span><br><span class="line">	$ git add _config.yml <span class="built_in">source</span>/ themes/</span><br><span class="line"><span class="number">3</span>、查看状态，确保无误</span><br><span class="line">	$ git status <span class="operator">-s</span> </span><br><span class="line">	M  <span class="string">"source/_posts/\345\234\250mac\344\270\212\344\275\277\347\224\250github-hexo\346\220\255\345\273\272\345\215\232\345\256\242\347\232\204\347\256\200\345\215\225\350\256\260\345\275\225.md"</span></span><br><span class="line"><span class="number">4</span>、本地提交</span><br><span class="line">	$ git commit -m <span class="string">'update surce'</span></span><br><span class="line">	[pagesSource <span class="number">8978</span>c1d] update surce</span><br><span class="line"> <span class="number">1</span> file changed, <span class="number">40</span> insertions(+)</span><br><span class="line"><span class="number">5</span>、提交到github	</span><br><span class="line">	majiandeMacBook-Pro:blog majian$ git push -u origin pagesSource</span><br><span class="line">	Counting objects: <span class="number">5</span>, done.</span><br><span class="line">	Delta compression using up to <span class="number">4</span> threads.</span><br><span class="line">	Compressing objects: <span class="number">100</span>% (<span class="number">4</span>/<span class="number">4</span>), done.</span><br><span class="line">	Writing objects: <span class="number">100</span>% (<span class="number">5</span>/<span class="number">5</span>), <span class="number">1.21</span> KiB | <span class="number">0</span> bytes/s, done.</span><br><span class="line">	Total <span class="number">5</span> (delta <span class="number">2</span>), reused <span class="number">0</span> (delta <span class="number">0</span>)</span><br><span class="line">	To https://github.com/goodheart/goodheart.github.io.git</span><br><span class="line">   <span class="built_in">fc</span>198a3..<span class="number">8978</span>c1d  pagesSource -&gt; pagesSource</span><br><span class="line">   Branch pagesSource <span class="built_in">set</span> up to track remote branch pagesSource from origin.</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">&raquo;</a>
+  </nav>
+
  </div>
 
         
@@ -932,22 +898,22 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">10</span>
-              <span class="site-state-item-name">文章</span>
+              <span class="site-state-item-count">11</span>
+              <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
             
               <span class="site-state-item-count">0</span>
-              <span class="site-state-item-name">分類</span>
+              <span class="site-state-item-name">分类</span>
               
           </div>
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
               <span class="site-state-item-count">0</span>
-              <span class="site-state-item-name">標籤</span>
+              <span class="site-state-item-name">标签</span>
               </a>
           </div>
 
@@ -987,11 +953,11 @@
   <span class="author" itemprop="copyrightHolder">jane ma</span>
 </div>
 <div class="powered-by">
-  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 強力驅動
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
 </div>
 
 <div class="theme-info">
-  主題 -
+  主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
     NexT
   </a>
