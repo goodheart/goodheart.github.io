@@ -41,16 +41,22 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="知识管理 效率为上 简约为美 时间无价">
+<meta name="description" content="在打包测试和发布过程中，经常忘记该build版本，所以记录下现在的解决方法，让build号自己变化：
+#!/bin/bashREV=svnversion -nc | /usr/bin/sed -e &amp;#39;s/^[^:]*://;s/[A-Za-z]//&amp;#39;
+BASEVERNUM=/usr/libexec/PlistBuddy -c &amp;quot;Print :CFBundleShortVe">
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用sublime text写Markdown并预览">
-<meta property="og:url" content="http://blog.goodheart-ios.com.cn/使用sublime-text写Markdown并预览/index.html">
+<meta property="og:title" content="iOS开发build号随着提交代码版本号变化">
+<meta property="og:url" content="http://blog.goodheart-ios.com.cn/iOS开发build号随着提交代码版本号变化/index.html">
 <meta property="og:site_name" content="雨中漫步">
-<meta property="og:description" content="知识管理 效率为上 简约为美 时间无价">
-<meta property="og:updated_time" content="2015-09-19T17:14:45.000Z">
+<meta property="og:description" content="在打包测试和发布过程中，经常忘记该build版本，所以记录下现在的解决方法，让build号自己变化：
+#!/bin/bashREV=svnversion -nc | /usr/bin/sed -e &amp;#39;s/^[^:]*://;s/[A-Za-z]//&amp;#39;
+BASEVERNUM=/usr/libexec/PlistBuddy -c &amp;quot;Print :CFBundleShortVe">
+<meta property="og:updated_time" content="2016-03-14T06:59:22.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="使用sublime text写Markdown并预览">
-<meta name="twitter:description" content="知识管理 效率为上 简约为美 时间无价">
+<meta name="twitter:title" content="iOS开发build号随着提交代码版本号变化">
+<meta name="twitter:description" content="在打包测试和发布过程中，经常忘记该build版本，所以记录下现在的解决方法，让build号自己变化：
+#!/bin/bashREV=svnversion -nc | /usr/bin/sed -e &amp;#39;s/^[^:]*://;s/[A-Za-z]//&amp;#39;
+BASEVERNUM=/usr/libexec/PlistBuddy -c &amp;quot;Print :CFBundleShortVe">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -60,7 +66,7 @@
   };
 </script>
 
-  <title> 使用sublime text写Markdown并预览 | 雨中漫步 </title>
+  <title> iOS开发build号随着提交代码版本号变化 | 雨中漫步 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
@@ -159,7 +165,7 @@
           
           
             
-              使用sublime text写Markdown并预览
+              iOS开发build号随着提交代码版本号变化
             
           
         </h1>
@@ -168,8 +174,8 @@
       <div class="post-meta">
         <span class="post-time">
           發表於
-          <time itemprop="dateCreated" datetime="2015-09-18T15:01:56+08:00" content="2015-09-18">
-            2015-09-18
+          <time itemprop="dateCreated" datetime="2016-03-14T14:57:49+08:00" content="2016-03-14">
+            2016-03-14
           </time>
         </span>
 
@@ -179,8 +185,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/使用sublime-text写Markdown并预览/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="使用sublime-text写Markdown并预览/" itemprop="commentsCount"></span>
+              <a href="/iOS开发build号随着提交代码版本号变化/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="iOS开发build号随着提交代码版本号变化/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -194,7 +200,11 @@
       
 
       
-        <span itemprop="articleBody"></span>
+        <span itemprop="articleBody"><p>在打包测试和发布过程中，经常忘记该build版本，所以记录下现在的解决方法，让build号自己变化：</p>
+<p>#!/bin/bash<br>REV=<code>svnversion -nc | /usr/bin/sed -e &#39;s/^[^:]*://;s/[A-Za-z]//&#39;</code></p>
+<p>BASEVERNUM=<code>/usr/libexec/PlistBuddy -c &quot;Print :CFBundleShortVersionString&quot; &quot;${INFOPLIST_FILE}&quot;</code></p>
+<p>/usr/libexec/PlistBuddy -c “Set :CFBundleVersion $REV” “${INFOPLIST_FILE}”</p>
+</span>
       
     </div>
 
@@ -205,13 +215,11 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/ios技巧记录/" rel="prev">ios技巧记录</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/linux常用命令记录/" rel="next">linux常用命令记录</a>
+              <a href="/文本右侧对齐/" rel="next">文本右侧对齐</a>
             
           </div>
         </div>
@@ -236,8 +244,8 @@
         
           <div class="comments" id="comments">
             
-              <div class="ds-thread" data-thread-key="使用sublime-text写Markdown并预览/"
-                   data-title="使用sublime text写Markdown并预览" data-url="http://blog.goodheart-ios.com.cn/使用sublime-text写Markdown并预览/">
+              <div class="ds-thread" data-thread-key="iOS开发build号随着提交代码版本号变化/"
+                   data-title="iOS开发build号随着提交代码版本号变化" data-url="http://blog.goodheart-ios.com.cn/iOS开发build号随着提交代码版本号变化/">
               </div>
             
           </div>

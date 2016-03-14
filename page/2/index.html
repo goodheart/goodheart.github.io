@@ -112,7 +112,7 @@
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             <i class="menu-item-icon icon-next-home"></i> <br />
-            首页
+            首頁
           </a>
         </li>
       
@@ -120,7 +120,7 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             <i class="menu-item-icon icon-next-archives"></i> <br />
-            归档
+            歸檔
           </a>
         </li>
       
@@ -128,7 +128,7 @@
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
             <i class="menu-item-icon icon-next-tags"></i> <br />
-            标签
+            標籤
           </a>
         </li>
       
@@ -160,6 +160,76 @@
           
           
             
+              <a class="post-title-link" href="/linux常用命令记录/" itemprop="url">
+                linux常用命令记录
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          發表於
+          <time itemprop="dateCreated" datetime="2015-09-18T09:58:04+08:00" content="2015-09-18">
+            2015-09-18
+          </time>
+        </span>
+
+        
+
+        
+          
+            <span class="post-comments-count">
+              &nbsp; | &nbsp;
+              <a href="/linux常用命令记录/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="linux常用命令记录/" itemprop="commentsCount"></span>
+              </a>
+            </span>
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody"><h2 id="当我们执行sudo_的时候，出现XX_is_not_in_the_sudoers_file-_This_incident_will_be_reported-解决方法如下:">当我们执行sudo 的时候，出现XX is not in the sudoers file.  This incident will be reported.解决方法如下:</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">root@LECLOUD:~<span class="comment"># cd /etc/</span></span><br><span class="line">root@LECLOUD:/etc<span class="comment"># ls -l sudoers</span></span><br><span class="line">-r--r----- <span class="number">1</span> root root <span class="number">745</span> Aug <span class="number">28</span>  <span class="number">2014</span> sudoers //此时sudoers文件可读不可写</span><br><span class="line">root@LECLOUD:/etc<span class="comment"># chmod u+w /etc/sudoers //赋予用户写权限</span></span><br><span class="line">root@LECLOUD:/etc<span class="comment"># ls -l sudoers</span></span><br><span class="line">-rw-r----- <span class="number">1</span> root root <span class="number">745</span> Aug <span class="number">28</span>  <span class="number">2014</span> sudoers</span><br><span class="line">root@LECLOUD:/etc<span class="comment"># vim sudoers</span></span><br><span class="line">//在<span class="comment">#User privilege specification下面加一行XX ALL=(ALL:ALL) ALL</span></span><br><span class="line">root@LECLOUD:/etc<span class="comment"># ls -l sudoers  </span></span><br><span class="line">-rw-r----- <span class="number">1</span> root root <span class="number">767</span> Sep <span class="number">18</span> <span class="number">09</span>:<span class="number">49</span> sudoers</span><br><span class="line">root@LECLOUD:/etc<span class="comment"># chmod u-w sudoers //删掉写权限，变成只读文件</span></span><br><span class="line">root@LECLOUD:/etc<span class="comment"># ls -l sudoers</span></span><br><span class="line">-r--r----- <span class="number">1</span> root root <span class="number">767</span> Sep <span class="number">18</span> <span class="number">09</span>:<span class="number">49</span> sudoers</span><br></pre></td></tr></table></figure>
+<h2 id="当使用vim编译一个只读文件的时候，可以使用以下命令强制保存修改">当使用vim编译一个只读文件的时候，可以使用以下命令强制保存修改</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:w !sudo tee %</span><br></pre></td></tr></table></figure>
+</span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
               <a class="post-title-link" href="/在mac上使用github-hexo搭建博客的简单记录/" itemprop="url">
                 在mac上使用github+hexo搭建博客的简单记录
               </a>
@@ -170,7 +240,7 @@
 
       <div class="post-meta">
         <span class="post-time">
-          发表于
+          發表於
           <time itemprop="dateCreated" datetime="2015-09-17T16:09:00+08:00" content="2015-09-17">
             2015-09-17
           </time>
@@ -294,22 +364,22 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">11</span>
-              <span class="site-state-item-name">日志</span>
+              <span class="site-state-item-count">12</span>
+              <span class="site-state-item-name">文章</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
             
               <span class="site-state-item-count">0</span>
-              <span class="site-state-item-name">分类</span>
+              <span class="site-state-item-name">分類</span>
               
           </div>
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
               <span class="site-state-item-count">0</span>
-              <span class="site-state-item-name">标签</span>
+              <span class="site-state-item-name">標籤</span>
               </a>
           </div>
 
@@ -349,11 +419,11 @@
   <span class="author" itemprop="copyrightHolder">jane ma</span>
 </div>
 <div class="powered-by">
-  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 強力驅動
 </div>
 
 <div class="theme-info">
-  主题 -
+  主題 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
     NexT
   </a>
