@@ -1,0 +1,6 @@
+framework module SNHFoundation {
+  umbrella header "SNHFoundation.h"
+
+  export *
+  module * { export * }
+}
