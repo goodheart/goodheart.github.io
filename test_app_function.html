@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
+    <meta http-equiv="Cache-Control" content="max-age=0">
+    <meta name="apple-touch-fullscreen" content="yes">
+    
+</head>
+<body>
+    <p>获取token</p>
+    <p>window.web.getAccessToken()</p>
+	<button onclick="getAccessToken()">获取token</button>
+
+    <p>获取设备号</p>
+    <p>window.web.getPhoneIMEI()</p>
+    <button onclick="getPhoneIMEI()">获取设备号</button>
+
+	<p>获取versionCode</p>
+    <p>window.web.build()</p>
+    <button onclick="build()">获取版本code</button>
+
+    <p>获取设备号</p>
+    <p>window.web.version()</p>
+    <button onclick="version()">获取APP版本号</button>
+    
+    <p>获取成员信息</p>
+    <p>window.web.getLoginMemberInfo()</p>
+    <button onclick="getLoginMemberInfo()">获取成员信息（成员版）</button>
+
+    <p>获取成员信息2 回调</p>
+    <p>window.web.getMemberInfoCallback()</p>
+    <button onclick="getMemberInfo()">获取成员信息2（成员版）</button>
+
+    <p>获取成员信息3</p>
+    <p>window.web.getMemberInfo()</p>
+    <button onclick="getMemberInfo()">获取成员信息3（成员版）</button>
+
+
+</body>
+<script type="text/javascript">
+    function getAccessToken(){
+        alert(window.web.getAccessToken())
+    }
+    function getPhoneIMEI(){
+        alert(window.web.getPhoneIMEI())
+    }
+    function build(){
+        alert(window.web.build())
+    }
+    function version(){
+        alert(window.web.version())
+    }
+
+    function getLoginMemberInfo(){
+        alert(JSON.stringify(window.web.getLoginMemberInfo()))
+    }
+
+    function getMemberInfoCallback(){
+        var id = window.web.getLoginUserId();
+        window.web.getMemberInfo(id,function(info){
+            alert(JSON.stringify(info))
+            alert(info.realName)
+        })
+    }
+
+    function getMemberInfo(){
+        var id = window.web.getLoginUserId();
+        var userInfo =window.web.getMemberInfo(id);
+        alert(JSON.stringify(userInfo));
+        alert(userInfo.realName);
+    }
+</script>
+</html>
