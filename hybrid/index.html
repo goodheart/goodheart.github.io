@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <meta charset="utf8"/>
+        <script src="./snh_hybrid.js"></script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            window.onerror = function(error) {
+                console.log(error);
+            }
+            
+            function trimAllSpace(str) {
+                if (typeof str == "string") {
+                    return str.replace(/\s/g,'');
+                }
+                return str;
+            }
+
+            function test() {
+                console.log(trimAllSpace("a a a   b"));
+                console.log("12332")
+            }
+
+            function invokeHybrid() {
+                // console.log("hello world")
+                window.web.getVersion(function(version) {
+                    console.log("version:" + version);
+                })                
+            }
+        </script>
+        <br />
+        <br />
+        <br />
+        <br />
+        <button onclick="invokeHybrid()">获取版本号/button>
+        <br />
+        <button onclick="window.web.openVideoList()">打开视频列表</button>
+    </body>
+</html>
