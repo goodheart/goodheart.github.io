@@ -18,6 +18,7 @@ window.web = {
         iframe = null;
     },
     invokeCallback: function(cbID,cbValue) {
+        cbValue = decodeURIComponent(cbValue);
         if (cbID == null || cbID == undefined) {
             return;
         } 
@@ -27,6 +28,19 @@ window.web = {
         }
         web.__callback[cbID] = undefined;
         cb(cbValue);
+    },
+    _readyCall: function(obj,functionName,successcallback,failcallback,errorcallback,args) {
+        var tempArgs = args || {};
+        if (successcallback != null) {
+            tempArgs["successcallback"] = successcallback;
+        }
+        if (failcallback != null) {
+            tempArgs["failcallback"] = failcallback;
+        }
+        if (errorcallback != null) {
+            tempArgs["errorcallback"] = errorcallback;
+        }
+        this.call(obj,functionName,tempArgs);
     },
     call: function(obj,functionName,args) {
         var uri = "jsbridge://" + obj + "/" + functionName;
@@ -42,7 +56,7 @@ window.web = {
                     }
                 }
             }
-            uri += JSON.stringify(args);
+            uri += encodeURIComponent(JSON.stringify(args));
         }
         this._invokeMethod(uri);
     },
@@ -61,10 +75,21 @@ window.web = {
     },
     //获取当前系统版本号
     getVersion: function(callback) {
-        window.web.call("common","version",{"successcallback":callback});
+        // window.web.call("common","version",{"successcallback":callback});
+        window.web._readyCall("appInfo","version",callback,null,null,null);
+    },
+    getBuildVersion: function(callback) {
+        // window.web.call("appInfo","buildVersion",{"success"});
+        window.web._readyCall("appInfo","buildVersion",callback,null,null,null);
     },
     openVideoList: function() {
         window.web.call("router","open",{"path":"video/list"});
+    },
+    openView: function() {
+        window.web.call("memberlive","openred",null);
+    },
+    closeView: function() {
+        window.web.call("memberlive","closered",null);
     },
     getLogContainer: function() {
         var box = document.createElement('div'),

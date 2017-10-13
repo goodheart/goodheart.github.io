@@ -5,27 +5,38 @@
     </head>
     <body>
         <script type="text/javascript">
-            window.onerror = function(error) {
-                console.log(error);
-            }
-            
+            // window.onerror = function(error) {
+            //     console.log(error);
+            // }
             function trimAllSpace(str) {
                 if (typeof str == "string") {
                     return str.replace(/\s/g,'');
                 }
                 return str;
             }
-
             function test() {
                 console.log(trimAllSpace("a a a   b"));
                 console.log("12332")
             }
-
             function invokeHybrid() {
                 // console.log("hello world")
                 window.web.getVersion(function(version) {
                     console.log("version:" + version);
                 })                
+            }
+            function getBuildVersion() {
+                window.web.getBuildVersion(function(buildVersion) {
+                    var buildJson = JSON.parse(buildVersion);
+                    console.log("buildVersion:" +buildJson["build"]);
+                })
+            }
+            function testError() {
+                var array = ["a","b"]
+                console.log(array[3]);
+            }
+            function openView() {
+                window.web.openView();
+                setTimeout(window.web.closeView,3000);
             }
         </script>
         <br />
@@ -35,5 +46,11 @@
         <button onclick="invokeHybrid()">获取版本号/button>
         <br />
         <button onclick="window.web.openVideoList()">打开视频列表</button>
+        <br />
+        <button onclick="testError()">测试js error</button>
+        <br />
+        <button onclick="getBuildVersion()">获取build号</button>
+        <br />
+        <button onclick="openView()">打开view</button>
     </body>
 </html>
