@@ -54,14 +54,14 @@
 						var advCount = document.getElementById("swiper-main").children.length;
 						console.log(advCount + "idx" + swiper.activeIndex);
 						init();
-						if (advCount - 1 === swiper.activeIndex) {
-							f = setTimeout(function() {
-								mySwiper.slideNext();
-							}, 2000);
-						} else {
+						if (advCount - 1 == swiper.activeIndex) {
 							e = setTimeout(function(){
 								window.web.skip()
 							},2000)
+						} else {
+							f = setTimeout(function() {
+								mySwiper.slideNext();
+							}, 2000);
 						}
 					    // switch(swiper.activeIndex)
 						// {
