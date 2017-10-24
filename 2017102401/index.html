@@ -52,6 +52,7 @@
 					onSlideChangeStart: function(swiper){
 					    console.log(swiper.activeIndex);
 						var advCount = document.getElementById("swiper-main").children.length;
+						console.log(advCount + "idx" + swiper.activeIndex);
 						init();
 						if (advCount - 1 == swiper.activeIndex) {
 							f = setTimeout(function() {
